@@ -78,7 +78,7 @@ export default function Profile() {
                       Для публикации вашей клиники необходимо загрузить и стандартизировать прайс-лист через нашу умную систему. Перейдите по вашей уникальной защищенной ссылке:
                     </p>
                     <a 
-                      href={`http://localhost:8000?token=${appData.token}&clinic=${encodeURIComponent(appData.name)}`} 
+                      href={`${import.meta.env.VITE_PARSER_URL || 'http://localhost:8000'}/?token=${appData.token}&clinic=${encodeURIComponent(appData.name)}`} 
                       target="_blank" 
                       rel="noreferrer" 
                       className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl text-sm transition-colors shadow-sm"
